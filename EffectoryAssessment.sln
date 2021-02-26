@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EffectoryAssessment", "EffectoryAssessment\EffectoryAssessment.csproj", "{48BB089E-EEA4-4BFC-B0EC-7D152AACD338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48BB089E-EEA4-4BFC-B0EC-7D152AACD338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BB089E-EEA4-4BFC-B0EC-7D152AACD338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BB089E-EEA4-4BFC-B0EC-7D152AACD338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BB089E-EEA4-4BFC-B0EC-7D152AACD338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3333522-013B-4D2C-9670-3DE817B44D53}
+	EndGlobalSection
+EndGlobal
