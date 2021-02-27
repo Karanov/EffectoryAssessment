@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "ed8d5893-252c-4626-8ae4-495a1fe750fb",
+		"name": "EffectoryAssessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostEmployeeAnswers Happy Flow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"questionnaireId\": 1000,\r\n  \"employeeId\": \"Employee1\",\r\n  \"departmentId\": \"marketing\",\r\n  \"subjectItems\": [\r\n    {\r\n      \"subjectId\": 2605515,\r\n      \"answerItems\": [\r\n        {\r\n          \"questionId\": 3807638,\r\n          \"answerId\": 17969148,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3807643,\r\n          \"answerId\": 17969146,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3851855,\r\n          \"answerId\": 18166386,\r\n          \"additional\": null\r\n        },\r\n        {\r\n          \"questionId\": 3807701,\r\n          \"answerId\": 17969413,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3807644,\r\n          \"answerId\": 17969152,\r\n          \"additional\": \"\"\r\n        }\r\n        \r\n      ]\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61407/EmployeeAnswers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61407",
+					"path": [
+						"EmployeeAnswers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostEmployeeAnswers Happy Flow Employee 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"questionnaireId\": 1000,\r\n  \"employeeId\": \"Employee2\",\r\n  \"departmentId\": \"marketing\",\r\n  \"subjectItems\": [\r\n    {\r\n      \"subjectId\": 2605515,\r\n      \"answerItems\": [\r\n        {\r\n          \"questionId\": 3807638,\r\n          \"answerId\": 17969122,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3807643,\r\n          \"answerId\": 17969147,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3851855,\r\n          \"answerId\": 18166386,\r\n          \"additional\": null\r\n        },\r\n        {\r\n          \"questionId\": 3807701,\r\n          \"answerId\": 17969411,\r\n          \"additional\": \"\"\r\n        },\r\n        {\r\n          \"questionId\": 3807644,\r\n          \"answerId\": 17969150,\r\n          \"additional\": \"\"\r\n        }\r\n        \r\n      ]\r\n    }\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:61407/EmployeeAnswers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61407",
+					"path": [
+						"EmployeeAnswers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Average Happy Flow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61407/employeeanswers/averages/2605515/3851855/marketing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61407",
+					"path": [
+						"employeeanswers",
+						"averages",
+						"2605515",
+						"3851855",
+						"marketing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Average Unhappy Flow - Invalid DepartmentId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61407/employeeanswers/averages/2605515/3851855/development",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61407",
+					"path": [
+						"employeeanswers",
+						"averages",
+						"2605515",
+						"3851855",
+						"development"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Average Unhappy Flow - Invalid SubjectId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
