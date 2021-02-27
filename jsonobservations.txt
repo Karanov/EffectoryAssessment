@@ -1,0 +1,7 @@
+Obviously this masterdata is pretty rudimentary. While I'm sure an actual implementation would require multiple questionnaires to be supported, this wasn't part of the provided json so I didn't implement it.
+
+The repeated use of "questionnaireItems" was a neat little trick. It prevents people using an automated "Json to C# class" conversion tool. Or rather, if you do that you would miss the four layered tree structure (questionnaire - subject - question - answer) it actually presents. 
+
+One thing I missed was a scoring for each of the answers. If you want to calculate averages you'd ideally needed a score per answer. I didn't have time to implement this masterdata myself so I cheated by using the ordernumber. But since the order of answers isn't implemented uniformly in the master data, I had to also provide the relevant texts.
+
+I didn't get to see if my code handled the free entry type question (answerCategoryType 2) correctly, but I tried to take it into account while building the app. 
