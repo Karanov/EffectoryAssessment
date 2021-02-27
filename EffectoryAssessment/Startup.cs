@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EffectoryAssessment.Repositories;
 
 namespace EffectoryAssessment
 {
@@ -32,6 +33,7 @@ namespace EffectoryAssessment
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EffectoryAssessment", Version = "v1" });
             });
+            services.AddSingleton<IDataRepository, DataRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
